@@ -1,0 +1,33 @@
+.footer {
+  width: 100%;
+  background: @bkg--dark;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  & .container {
+    text-align: center;
+  }
+  &__btns {
+    display: inline-block;
+    padding: 20px 0;
+    @media(min-width: @screen--md) {
+      padding: 40px 0;
+    }
+  }
+  &__menu-btn {
+    display: inline-block;
+    padding: 0 15px;
+    color: @color;
+    font-size: @font-size--s;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-right: none;
+    @media(min-width: @screen--md) {
+      border-right: 1px solid @color;
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+}

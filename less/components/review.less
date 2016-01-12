@@ -1,0 +1,54 @@
+.review {
+  margin: 0 auto 70px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @media(min-width: @screen--md) {
+      flex-direction: row;
+    }
+  }
+  &__item {
+    width: 80%;
+    padding: 110px 0 0 0;
+    margin: 0 auto 30px;
+    font-family: @font-family--th;
+    font-weight: 100;
+    position: relative;
+    @media(min-width: @screen--md) {
+      width: 50%;
+      padding: 0 0 0 110px;
+      margin: 0 30px 0 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &:after {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      background: url("../img/review-user01.png") no-repeat 50% 50%;
+    }
+    &:last-child {
+      margin: 0 auto;
+      &:after {
+        background: url("../img/review-user02.png") no-repeat 50% 50%;
+      }
+    }
+    & span {
+      font-weight: 300;
+    }
+    & p {
+      margin: 0 0 15px 0;
+      &:last-child {
+        margin: 0;
+        @media(min-width: @screen--md) {
+          margin: 20px 0 0;
+        }
+      }
+    }
+  }
+}

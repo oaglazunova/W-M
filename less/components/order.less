@@ -1,0 +1,56 @@
+.order {
+  margin: 0 auto 130px;
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    &:after {
+      display: none;
+    }
+    @media(min-width: @screen--md) {
+      flex-direction: row;
+      width: 610px;
+      margin: 0 auto;
+    }
+    @media(min-width: @screen--lg) {
+      margin: 0;
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        right: -210px;
+        bottom: -30px;
+        background: url("../img/order-img.png") 50% 50% no-repeat;
+        width: 215px;
+        height: 215px;
+      }
+    }
+    @media(min-width: @screen--lg) {
+      &:after {
+        right: -315px;
+      }
+    }
+  }
+  &__input {
+    width: 300px;
+    height: 40px;
+    padding: 5px 5px;
+    margin: 0 10px 10px 0;
+    color: @color--dark;
+    border-radius: 5px;
+    &--text {
+      height: 140px;
+    }
+  }
+  & textarea {
+    margin: 0 0 10px 0;
+  }
+  & .btn {
+    @media(min-width: @screen--md) {
+      float: right;
+    }
+  }
+}
